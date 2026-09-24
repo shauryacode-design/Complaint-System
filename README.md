@@ -55,11 +55,11 @@ json{
   }
 }
 
-**🚀 Quick Start (Local Setup)** 
-**Prerequisites**
-Python 3.10+
-Node.js 18+
-PostgreSQL instance
+**🚀 Quick Start (Local Setup)**  
+**Prerequisites**  
+Python 3.10+  
+Node.js 18+  
+PostgreSQL instance  
 
 **1. Backend Setup**
 cd backend
