@@ -55,7 +55,7 @@ json{
   }
 }
 
-**🚀 Quick Start (Local Setup)** /n
+**🚀 Quick Start (Local Setup)** \n
 **Prerequisites**
 Python 3.10+
 Node.js 18+
