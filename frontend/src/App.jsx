@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const initialComplaint = {
   complaint_source: "",
@@ -88,8 +89,8 @@ export default function App() {
       const isEditing = hasComplaintData(complaint);
 
       const endpoint = isEditing
-        ? "http://127.0.0.1:8000/ai/edit-complaint"
-        : "http://127.0.0.1:8000/ai/analyze-complaint";
+        ? `${API_URL}/ai/edit-complaint`
+        : `${API_URL}/ai/analyze-complaint`;
 
       const body = isEditing
         ? {
@@ -190,7 +191,7 @@ export default function App() {
       formData.append("file", file);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/ai/analyze-document",
+        `${API_URL}/ai/analyze-document`,
         {
           method: "POST",
           body: formData,
