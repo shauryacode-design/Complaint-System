@@ -1,28 +1,10 @@
-**Production-Grade AI Complaint Processing Pipeline**
+**Production-Grade AI Complaint Processing Pipeline**  
 An asynchronous, agentic data pipeline designed to ingest unstructured, multi-page pharmaceutical quality-management complaints (PDFs/Text), run them through stateful AI agents, and output structured, validated JSON data matching strict compliance standards.
 
 🌐 [Live Demo Link] 
 
 **🏗️ System Architecture & Workflow**  
 Unlike basic single-prompt LLM wrappers, this system uses an Agentic Workflow (LangGraph) to handle parsing, validation, and correction in loops, ensuring 99%+ data extraction accuracy.  
-
-[File Ingestion: PDF/TXT]   
-       │  
-       ▼  
-[OCR & Text Extraction Engine]  
-       │  
-       ▼  
-[LangGraph Agent: Schema Extraction] ──(Validates against Pydantic)──┐  
-       ▲                                                             │  
-       │                                                          (Fails)
-   (Self-Correction Loop: Maximum 3 retries)                         │  
-       │                                                             ▼  
-       └──────────────────────────────────────────────   [Validation Agent]  
-                                                                     │  
-                                                                (Passes)  
-                                                                     │  
-                                                                     ▼  
-                                                         [Valid JSON Out / DB State]  
                                                        
 **Ingestion & OCR:** Multi-page documents or compliance PDFs are ingested via FastAPI endpoints. Tabular data and unstructured text are extracted cleanly.  
 **Agentic Extraction:** A LangGraph agent processes the text tokens and populates a heavily restricted schema using structured outputs.  
