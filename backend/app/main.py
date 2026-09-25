@@ -20,7 +20,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins = [
         "http://localhost:5173",
-        "https://complaint-system-sepia-xi.vercel.app/",
+        "https://complaint-system-sepia-xi.vercel.app",
     ]
     allow_credentials=True,
     allow_methods=["*"],
