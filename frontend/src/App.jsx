@@ -386,7 +386,7 @@ export default function App() {
           <section className="panel copilot-panel">
             <div className="panel-header copilot-header">
               <div>
-                <h2>AIVOA Copilot</h2>
+                <h2>AI Copilot</h2>
                 <p>Describe the complaint naturally.</p>
               </div>
             </div>
